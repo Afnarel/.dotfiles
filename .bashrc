@@ -35,31 +35,27 @@ alias ....='cd ../../..'
 alias ...='cd ../..'
 alias ..='cd ..'
 alias .='PS1= builtin .'
-alias ?=pydoc
-alias ??=pydoc2
-alias doc='cd ~/Documents'
-alias down='cd ~/Downloads'
-alias grep='grep --color=auto -n'
-alias killbg='kill %{1..1000} 2>/dev/null'
-alias ls='ls --color=auto'
+alias py=python
 alias py2=python2
 alias py3=python3
-alias py=python
-alias venv=mkvirtualenv
+alias ?=pydoc
+alias ??=pydoc2
 alias vi=vim
+alias venv=mkvirtualenv
+alias ls='ls --color=auto'
+alias grep='grep --color=auto -n'
+alias killbg='kill %{1..1000} 2>/dev/null'
+alias doc='cd ~/Documents'
+alias down='cd ~/Downloads'
 
+shopt -s dirspell
 shopt -s checkwinsize
-shopt -s cdspell
-shopt -s globstar
 
 export EDITOR=vim
 export HISTCONTROL=ignoreboth
-export HISTCONTROL=ignoredups
 export HISTFILESIZE=10000
 export HISTSIZE=10000
-# use gnu coreutils on Mac (and use the right man pages)
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-export PATH="~/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:$PATH"
+export PATH=".:/usr/local/bin:~/bin:$PATH"
 export PYTHONSTARTUP=~/.pythonrc.py
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_HOOK_DIR=~/.virtualenvs_hooks
@@ -67,11 +63,6 @@ export VIRTUALENVWRAPPER_HOOK_DIR=~/.virtualenvs_hooks
 # use bash-completion if available (obviously...)
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
-fi
-
-# for MacOS
-if [ -f /usr/local/etc/bash_completion ]; then
-    . /usr/local/etc/bash_completion
 fi
 
 # use virtualenvwrapper, if available...
@@ -111,3 +102,16 @@ branch="\[\e[1;36m\]\$(git-branch)\[\e[0m\]"
 root="\\$"
 # e.g. ✓ 16:33 <alexis @ alexis in ~/.dotfiles> (master) $
 PS1=" $check $time $user @ $host in $dir$branch $root "
+
+
+################
+# Mac specific #
+################
+
+# use gnu coreutils on Mac (and use the right man pages)
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+# Bash completion for MacOS
+if [ -f /usr/local/etc/bash_completion ]; then
+    . /usr/local/etc/bash_completion
+fi

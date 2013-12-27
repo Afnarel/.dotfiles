@@ -1,1 +1,7 @@
-source .bashrc
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+#if [ -f ~/.bashrc ]
+#then
+#  source ~/.bashrc
+#fi
+
