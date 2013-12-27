@@ -48,10 +48,6 @@ alias py=python
 alias venv=mkvirtualenv
 alias vi=vim
 
-# Palantir's aliases
-alias p='cd ~/Documents/Palantir'
-alias qs='cd ~/Documents/Palantir/Mac_QS_3.11.1.2'
-
 shopt -s checkwinsize
 shopt -s cdspell
 shopt -s globstar
