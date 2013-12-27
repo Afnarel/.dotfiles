@@ -1,4 +1,4 @@
-Reminder to myself, how to deploy the files:
+### Deployment ###
 
     git clone https://github.com/Alexis-D/.dotfiles.git
     cd .dotfiles
@@ -11,3 +11,6 @@ Submodules are used where possible.
 
 You'll need to `sudo pip install flake8 virtualenv virtualenvwrapper` first
 (not done in the deploy script because it requires root).
+
+If you are looking for information on the tools provided by these config files,
+have a look at the DOCUMENTATION.md file instead.
