@@ -1,4 +1,35 @@
+!Example: http://ft.bewatermyfriend.org/comp/x11/Xresources.html
+
 UXTerm*Background: #3A3A3A
 UXTerm*Foreground: #DADADA
 UXTerm*font: 9x15
 UXTerm*saveLines: 5000
+
+urxvt.background:           #3A3A3A
+urxvt.foreground:           #DADADA
+urxvt.font:                 9x15
+urxvt.scrollBar:            false
+!urxvt.boldFont:             -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+!urxvt.cutchars:             "\\ `\"\'()*;<>[]{|}"
+!urxvt.tintColor:            white
+!urxvt.shading:              20
+!urxvt.inheritPixmap:        yes
+!urxvt.fading:               30
+!urxvt.color0:               Black
+!urxvt.color1:               Red3
+!urxvt.color2:               Green3
+!urxvt.color3:               Yellow3
+!urxvt.color4:               Blue2
+!urxvt.color5:               Magenta3
+!urxvt.color6:               Cyan3
+!urxvt.color7:               AntiqueWhite
+!urxvt.color8:               Grey15
+!urxvt.color9:               Red
+!urxvt.color10:              Green
+!urxvt.color11:              Yellow
+!urxvt.color12:              RoyalBlue
+!urxvt.color13:              Magenta
+!urxvt.color14:              Cyan
+!urxvt.color15:              White
+!urxvt.cursorColor:          Green
+!urxvt.utmpInhibit:          true
