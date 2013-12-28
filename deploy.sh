@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+ignore=("deploy.sh" ".git" ".gitignore" "README.md" "DOCUMENTATION.md")
+shouldCopy() {
+  for f in ${ignore[*]}; do
+    [[ "$1" == "$f" ]] && return 0
+  done
+  return 1
+}
+
 echo "Update repository..."
 git pull
 
@@ -13,7 +21,8 @@ cd
 
 for i in $(ls -A $OLDPWD)
 do
-    if [ "$i" != "deploy.sh" -a "$i" != ".git" -a "$i" != "README.md" ]
+    shouldCopy $i
+    if [ $? -ne 0 ]
     then
         echo "Symlinking $i..."
         rm -rf $i && ln -s "$OLDPWD/$i"
