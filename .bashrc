@@ -1,4 +1,5 @@
-# Check for an interactive session
+# Check for an interactive session:
+# http://www.gnu.org/software/bash/manual/bashref.html#Is-this-Shell-Interactive_003f
 [ -z "$PS1" ] && return
 
 # create an archive from a directory
@@ -60,24 +61,47 @@ export PYTHONSTARTUP=~/.pythonrc.py
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_HOOK_DIR=~/.virtualenvs_hooks
 
-# use bash-completion if available (obviously...)
-if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+# bash-completion
+# Already sourced in /etc/bash.bashrc
+if [ -r /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+else
+    echo "Warning: bash_completion file not found or not readable"
 fi
 
-# use virtualenvwrapper, if available...
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    . /usr/local/bin/virtualenvwrapper.sh
+# virtualenvwrapper
+if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+    . /usr/bin/virtualenvwrapper.sh
+else
+    echo "Warning: virtualenvwrapper.sh file not found"
 fi
 
 # for __git_ps1
-if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
-    . /usr/local/etc/bash_completion.d/git-prompt.sh
+if [ -f /usr/share/git/git-prompt.sh ]; then
+    . /usr/share/git/git-prompt.sh
+else
+    echo "Warning: git-prompt.sh file not found"
 fi
 
+git-branch() {
+    __git_ps1 2>/dev/null
+}
+
+# Show the list of autocompletion options after the first tab
+bind 'set show-all-if-ambiguous on'
+# Do now show hidden files during tab completion
 bind 'set match-hidden-files off'
-bind \C-w:backward-kill-word
+# Ask if I want to display all the possibilities when there are
+# more than 50 autocompletion options
+bind 'set completion-query-items 50'
+# bind \C-w:backward-kill-word # works natively
+
 stty stop '' # disable ^S
+
+
+#######
+# PS1 #
+#######
 
 too-long()
 {
@@ -89,10 +113,6 @@ too-long()
     fi
 }
 
-git-branch() {
-    __git_ps1 2>/dev/null
-}
-
 check="\[\033[01;37m\]\$(if [[ \$? == 0 ]]; then echo \"\[\033[01;32m\]\342\[\234\223\]\"; else echo \"\[\033[01;31m\]\342\[\234\227\]\"; fi)\[\e[0m\]"
 time="\A"
 user="\[\e[1;37m\]\u\[\e[0m\]"
@@ -100,7 +120,6 @@ host="\[\e[1;34m\]\h\[\e[0m\]"
 dir="\[\e[1;32m\]\$(too-long)\[\e[0m\]"
 branch="\[\e[1;36m\]\$(git-branch)\[\e[0m\]"
 root="\\$"
-# e.g. ✓ 16:33 <alexis @ alexis in ~/.dotfiles> (master) $
 PS1=" $check $time $user @ $host in $dir$branch $root "
 
 
@@ -109,9 +128,4 @@ PS1=" $check $time $user @ $host in $dir$branch $root "
 ################
 
 # use gnu coreutils on Mac (and use the right man pages)
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
-# Bash completion for MacOS
-if [ -f /usr/local/etc/bash_completion ]; then
-    . /usr/local/etc/bash_completion
-fi
+#export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"

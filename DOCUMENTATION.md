@@ -37,6 +37,18 @@ https://pypi.python.org/pypi/virtualenvwrapper/1.12
   * `dirspell` corrects spelling errors in directories names during completion
   * `checkwinsize` updates the values of LINES and COLUMNS after a command if necessary
 
+### Better autocompletion ###
+  * The list of possibilities for an ambiguous completion is shown after the first tab, no need for a second one
+  * Hidden files and directories are ignored during tab completion (for an empty query)
+  * The user is asked a confirmation when he asks to display more than 50 possible completion
+
+### Enhanced PS1 ###
+  * The bash prompt (PS1) looks like `21:51 afnarel @ oxygen in ~/Documents/projects/dotfiles (master) $`.
+  * It is git-aware (displays the current branch)
+  * It has colors.
+  * In unicode X terminals, a green tic or red cross at the beginning indicates whether the previous command was successful or not.
+  * If the current working directory is more than 30 characters long, it is shortened.
+
 ### Other features ###
 
   * The default EDITOR is vim
@@ -44,3 +56,4 @@ https://pypi.python.org/pypi/virtualenvwrapper/1.12
   * HISTCONTROL is set to `ignoreboth` so that duplicate commands and commands that have a leading whitespace are ignored
   * HISTSIZE (number of lines to store in history memory) HISTFILESIZE (number of lines to store in history file) are set to 10000 (the default is 5OO)
   * [PYTHONSTARTUP](http://docs.python.org/2/using/cmdline.html#envvar-PYTHONSTARTUP) is set to `~/.pythonrc.py` and this file is copied from this GitHub repository when deploying it
+  * The 'stop' TTY command (^S) is disabled
