@@ -7,8 +7,3 @@ XTerm*saveLines: 5000
 #XTerm*HiForeColor: white
 #XTerm*HiBackColor: #FF0000
 #XTerm*geometry: +50+100
-
-UXTerm*Background: #3A3A3A
-UXTerm*Foreground: #DADADA
-UXTerm*font: 9x15
-UXTerm*saveLines: 5000
