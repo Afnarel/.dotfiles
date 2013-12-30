@@ -1,1 +1,1 @@
-xrdb -merge ~/.Xresources & exec xbindkeys & /usr/bin/dwmstatus & dwm
+xrdb -merge ~/.Xresources & exec xbindkeys & dwmstatus & dwm
