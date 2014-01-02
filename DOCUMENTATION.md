@@ -57,3 +57,12 @@ https://pypi.python.org/pypi/virtualenvwrapper/1.12
   * HISTSIZE (number of lines to store in history memory) HISTFILESIZE (number of lines to store in history file) are set to 10000 (the default is 5OO)
   * [PYTHONSTARTUP](http://docs.python.org/2/using/cmdline.html#envvar-PYTHONSTARTUP) is set to `~/.pythonrc.py` and this file is copied from this GitHub repository when deploying it
   * The 'stop' TTY command (^S) is disabled
+  * There is a custom .pentadactylrc file and a color scheme for the Firefox Pentadactyl extension
+  * The .screenrc file removes screen's startup message
+  * .gitconfig sets a few preferences and aliases for git
+  * .pythonrc.py contains the list of Python modules to import when running Python in interactive mode
+
+### What is not done ###
+
+  * The Pentadactyl extension must be installed in Firefox
+  * [dwm](https://github.com/Afnarel/dwm) and [dwmstatus](https://github.com/Afnarel/dwmstatus) must be set up
