@@ -1,12 +1,12 @@
 [user]
-    name = Alexis Daboville
-    email = alexis.daboville@gmail.com
+    name = François Chapuis
+    email = afnarel@gmail.com
 [color]
     diff = auto
     status = auto
     branch = auto
 [alias]
-    ci = commit
+    cm = commit -m
     co = checkout
     di = diff
     br = branch
@@ -14,9 +14,9 @@
     st = status -s
     l = log --graph --all --date=relative\
         --pretty=format:'%C(cyan)%h%Creset %s %C(green)[%an/%cr]%Creset%C(red)%d%Creset'
+    lol = log --oneline --graph --decorate
     unstage = reset HEAD
     last = log -1 HEAD
-    update-all-submodules = submodule foreach git pull origin master
 [core]
     editor = vim
 [merge]
