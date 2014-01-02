@@ -1,22 +1,32 @@
+" set operates on Pentadactyl preferences
+" set! operates on Firefox preferences (the ones from about:config)
+" set passkeys+=<url>:<keys> forbids Pentadactyl to catch the given keys on the specified URL
+
+" Do not close the window when calling 'd' on the last tab
 set! browser.tabs.closeWindowWithLastTab=false
-set autocomplete=
-" c compose
-" j older, k newer
-" o open
-" e archive
-" r reply
-" a reply to all
-" [ archive and previous, ] archive and next
+
+" Do not show autocompletion options until I press Tab
+" set autocomplete=
+
+" GMail hotkeys when the "Keyboard Shortcuts" option is enabled
+" https://support.google.com/mail/answer/6594?hl=en
+"   c compose
+"   j older, k newer
+"   o open
+"   e archive
+"   r reply
+"   a reply to all
+"   [ archive and previous, ] archive and next
 set passkeys+=mail.google.com:cjkoera[]
-set passkeys+=theoldreader.com:npr/
 set passkeys+=docs.google.com/viewer:jk
-" set passkeys+=encrypted.google.com/search:jko/
-" set passkeys+=google.com/search:jko/
-set hintkeys=fghjklrtyui
+
+" Highlight all /find pattern matches on the current page after submission
 set hlfind
-set incfind
-" set defsearch=g
+
+" Move the current tab to the left or to the right using the '<' and '>' keys
 map < :tabm -1<cr>
 map > :tabm +1<cr>
+
+" Set the color scheme
 colorscheme solarized/colors/solarized-dark
 
