@@ -49,6 +49,22 @@ https://pypi.python.org/pypi/virtualenvwrapper/1.12
   * In unicode X terminals, a green tic or red cross at the beginning indicates whether the previous command was successful or not.
   * If the current working directory is more than 30 characters long, it is shortened.
 
+### Vim ###
+
+A few plugins for vim are available:
+  * [ctrlp](http://kien.github.io/ctrlp.vim) is a fuzzy file/buffer/mru/tag/... finder (it can open files and create new ones)
+  * [gundo](http://sjl.bitbucket.org/gundo.vim) allows its user to visualize his undo history as a browsable tree
+  * [jedi-vim](https://github.com/davidhalter/jedi-vim) provides Python autocompletion, lets the user see docstrings inside Vim and more...
+  * [nerdtree](https://github.com/scrooloose/nerdtree) is a tree explorer for Vim
+  * [tcomment](https://github.com/tomtom/tcomment_vim) provides easy to use, file-type sensible comments for Vim
+  * [eunuch](http://www.vim.org/scripts/script.php?script_id=4300) provides Vim sugar for the UNIX shell commands that need it the most
+  * [vim-flake8](https://github.com/nvie/vim-flake8) is a Vim plugin that runs the currently open file through Flake8, a static syntax and style checker for Python source code
+  * [vim-indent-object](http://www.vim.org/scripts/script.php?script_id=3037) defines a new text object representing lines of code at the same indent level
+  * [vim-rooter] changes the working directory to the project root when you open a file
+  * [vim-signature](https://github.com/kshenoy/vim-signature) lets its user toggle, display and navigate marks
+  * [vim-surround](https://github.com/tpope/vim-surround) provides mappings to easily delete, change and add surroundings (parentheses, brackets, quotes, XML tags, and more) in pairs
+  * [vim-unimpaired](https://github.com/tpope/vim-unimpaired) [doc](https://github.com/tpope/vim-unimpaired/blob/master/doc/unimpaired.txt) provides pairs of handy bracket mappings
+
 ### Other features ###
 
   * The default EDITOR is vim
