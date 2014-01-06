@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ignore=("deploy.sh" ".git" ".gitignore" "README.md" "DOCUMENTATION.md")
+ignore=("deploy.sh" ".git" ".gitignore" ".gitmodules" "README.md" "DOCUMENTATION.md")
 shouldCopy() {
   for f in ${ignore[*]}; do
     [[ "$1" == "$f" ]] && return 0
