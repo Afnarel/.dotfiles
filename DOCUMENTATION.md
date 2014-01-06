@@ -51,7 +51,21 @@ https://pypi.python.org/pypi/virtualenvwrapper/1.12
 
 ### Vim ###
 
+Some preferences are defined in .vimrc:
+
+  * Encoding is set to UTF-8
+  * Vim automagically detects the type of the current file
+  * Syntax highlighting is on
+  * Colors are adapted to a dark background
+  * If a line is longer than 78 characters, it's broken
+  * In insert mode, backspace deletes over line breaks, automatically-inserted indentation, and the place where insert mode started
+  * The mapleader character is a comma (',')
+  * The size of the Vim history (list of commands beginning with ':') is set to 5000
+  * Searches are done while typing (incremental) and results are highlighted. If the search query is entirely in lowercase, then the search is case insensitive but if it has an uppercase letter, the search becomes case sensitive
+
+
 A few plugins for vim are available:
+
   * [ctrlp](http://kien.github.io/ctrlp.vim) is a fuzzy file/buffer/mru/tag/... finder (it can open files and create new ones)
   * [gundo](http://sjl.bitbucket.org/gundo.vim) allows its user to visualize his undo history as a browsable tree
   * [jedi-vim](https://github.com/davidhalter/jedi-vim) provides Python autocompletion, lets the user see docstrings inside Vim and more...
