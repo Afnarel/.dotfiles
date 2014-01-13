@@ -130,6 +130,13 @@ branch="\[\e[1;36m\]\$(git-branch)\[\e[0m\]"
 root="\\$"
 PS1=" $check $time $user @ $host in $dir$branch $root "
 
+#############
+# SSH agent #
+#############
+
+eval `ssh-agent -s` > /dev/null 2>&1
+ssh-add ~/.ssh/aether33 > /dev/null 2>&1
+ssh-add ~/.ssh/afnarel > /dev/null 2>&1
 
 ################
 # Mac specific #
