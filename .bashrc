@@ -1,6 +1,8 @@
 # Check for an interactive session:
 # http://www.gnu.org/software/bash/manual/bashref.html#Is-this-Shell-Interactive_003f
+# If not running interactively, don't do anything
 [ -z "$PS1" ] && return
+#[[ $- != *i* ]] && return
 
 # create an archive from a directory
 mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
