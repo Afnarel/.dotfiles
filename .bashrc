@@ -46,10 +46,16 @@ alias ??=pydoc2
 alias vi=vim
 alias venv=mkvirtualenv
 alias ls='ls --color=auto'
+alias mv='mv -i'
 alias grep='grep --color=auto -n'
 alias killbg='kill %{1..1000} 2>/dev/null'
 alias doc='cd ~/Documents'
 alias down='cd ~/Downloads'
+alias jj='. jjbin'
+alias mm='. mmbin'
+# wr is in my scripts directory
+alias fren='wr fren' # Search WordReference (fr/en)
+alias enfr='wr enfr' # Search WordReference (en/fr)
 
 shopt -s dirspell
 shopt -s checkwinsize
