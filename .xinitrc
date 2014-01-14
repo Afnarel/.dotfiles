@@ -1,1 +1,1 @@
-xrdb -merge ~/.Xresources & exec xbindkeys & dwmstatus & dwm
+xrdb -merge ~/.Xresources & exec xbindkeys & ~/.monitor-detect/monitor-hotplug.sh & dwmstatus & startdwm
