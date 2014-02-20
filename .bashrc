@@ -47,6 +47,7 @@ alias vi=vim
 alias venv=mkvirtualenv
 alias ls='ls --color=auto'
 alias mv='mv -i'
+alias gcc-strict='gcc -std=c99 -pedantic -Wall'
 alias grep='grep --color=auto -n'
 alias killbg='kill %{1..1000} 2>/dev/null'
 alias doc='cd ~/Documents'
@@ -116,7 +117,7 @@ too-long()
     pfad=${PWD/#$HOME/\~}
     if [[ ${#pfad} -lt 30 ]]; then
         echo -n "${pfad}"
-    else 
+    else
         echo -n ".../`basename "$pfad"`"
     fi
 }
