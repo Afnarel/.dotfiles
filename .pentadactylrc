@@ -28,8 +28,8 @@ map < :tabm -1<cr>
 map > :tabm +1<cr>
 
 " Search youtube with v/V
-map v :open youtube
-map V :tabopen youtube
+map v :open youtube 
+map V :tabopen youtube 
 
 " Set the color scheme
 colorscheme solarized/colors/solarized-dark
