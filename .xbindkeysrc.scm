@@ -1,6 +1,6 @@
 (xbindkey '("XF86AudioRaiseVolume") "amixer set Master 2dB+ unmute")
 (xbindkey '("XF86AudioLowerVolume") "amixer set Master 2dB- unmute")
-(xbindkey '("XF86AudioMute") "amixer set Master toggle")
+(xbindkey '("XF86AudioMute") "amixer set Master toggle; amixer set Headphone 93% unmute; amixer set Speaker 93% unmute")
 (xbindkey '("XF86AudioMicMute") "amixer set Mic toggle")
 (xbindkey '("XF86AudioNext") "mocp -f")
 (xbindkey '("XF86AudioPrev") "mocp -r")
