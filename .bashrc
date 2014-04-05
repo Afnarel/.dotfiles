@@ -34,30 +34,6 @@ ex()
     fi
 }
 
-alias ....='cd ../../..'
-alias ...='cd ../..'
-alias ..='cd ..'
-alias .='PS1= builtin .'
-alias py=python
-alias py2=python2
-alias py3=python3
-alias ?=pydoc
-alias ??=pydoc2
-alias vi=vim
-alias venv=mkvirtualenv
-alias ls='ls --color=auto'
-alias mv='mv -i'
-alias gcc-strict='gcc -std=c99 -pedantic -Wall'
-alias grep='grep --color=auto -n'
-alias killbg='kill %{1..1000} 2>/dev/null'
-alias doc='cd ~/Documents'
-alias down='cd ~/Downloads'
-alias jj='. jjbin'
-alias mm='. mmbin'
-# wr is in my scripts directory
-alias fren='wr fren' # Search WordReference (fr/en)
-alias enfr='wr enfr' # Search WordReference (en/fr)
-
 shopt -s dirspell
 shopt -s checkwinsize
 
@@ -138,6 +114,7 @@ PS1=" $check $time $user @ $host in $dir$branch $root "
 eval `ssh-agent -s` > /dev/null 2>&1
 ssh-add ~/.ssh/aether33 > /dev/null 2>&1
 ssh-add ~/.ssh/afnarel > /dev/null 2>&1
+ssh-add ~/.ssh/ignilife > /dev/null 2>&1
 
 ################
 # Mac specific #
@@ -145,3 +122,31 @@ ssh-add ~/.ssh/afnarel > /dev/null 2>&1
 
 # use gnu coreutils on Mac (and use the right man pages)
 #export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+#########
+# Alias #
+#########
+
+alias ....='cd ../../..'
+alias ...='cd ../..'
+alias ..='cd ..'
+alias .='PS1= builtin .'
+alias py=python
+alias py2=python2
+alias py3=python3
+alias ?=pydoc
+alias ??=pydoc2
+alias vi=vim
+alias venv=mkvirtualenv
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias gcc-strict='gcc -std=c99 -pedantic -Wall'
+alias grep='grep --color=auto -n'
+alias killbg='kill %{1..1000} 2>/dev/null'
+alias doc='cd ~/Documents'
+alias down='cd ~/Downloads'
+alias jj='. jjbin'
+alias mm='. mmbin'
+# wr is in my scripts directory
+alias fren='wr fren' # Search WordReference (fr/en)
+alias enfr='wr enfr' # Search WordReference (en/fr)
