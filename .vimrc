@@ -251,6 +251,10 @@ cnoremap <C-f> <right>
 cnoremap <C-b> <left>
 cnoremap <C-h> <bs>
 
+" Keep text selected after (de)indent
+vnoremap > >gv$
+vnoremap < <gv$
+
 augroup closepreviewgroup
     autocmd!
     " close omnicomplete preview window
@@ -271,4 +275,5 @@ if version >= 703
 endif
 
 " Let Pathogen magic happen
+let g:pathogen_disabled = ["jedi-vim"]
 execute pathogen#infect()
