@@ -37,6 +37,3 @@
 [submodule ".vim/bundle/jedi-vim"]
 	path = .vim/bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
-[submodule ".vim/bundle/vim-markdown"]
-	path = .vim/bundle/vim-markdown
-	url = https://github.com/hallison/vim-markdown.git
