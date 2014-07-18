@@ -12,8 +12,15 @@ syntax on
 " let vim detect the type of the current file
 filetype plugin on
 
-" maximum lenght of inserted line (it's broken if wider)
-setlocal textwidth=78
+" maximum length of inserted line (it's broken if wider)
+" In Python only
+autocmd FileType python setlocal textwidth=78
+autocmd FileType python setlocal colorcolumn=79
+autocmd FileType python highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+
+" In htmldjango mode, use tabs to keep consistency
+" in the team
+autocmd FileType htmldjango setlocal noexpandtab
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -54,6 +61,10 @@ set expandtab
 set smarttab
 " indent = multiple of shiftwidth
 set shiftround
+
+" code folding
+set foldmethod=indent
+set foldlevel=99
 
 " filetype specific settings
 filetype plugin indent on
