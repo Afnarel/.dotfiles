@@ -130,6 +130,13 @@ ssh-add ~/.ssh/afnarel > /dev/null 2>&1
 # Alias #
 #########
 
+# Ignilife
+alias dashboard='workon dashboard; cd ~/Documents/Ignilife/dashboard/dashboard'
+alias ignilife='workon ignilife; cd ~/Documents/Ignilife/backend/ignilife'
+alias mobile='cd ~/Documents/Ignilife/mobile'
+alias build_mobile='mobile; ./android_builder.sh; cd platforms/android/ant-build; launch_http_server.sh'
+alias accesses='cat ~/Documents/Ignilife/Non-Technical/Accesses/machines.txt'
+
 alias ....='cd ../../..'
 alias ...='cd ../..'
 alias ..='cd ..'
@@ -145,6 +152,7 @@ alias ls='ls --color=auto'
 alias mv='mv -i'
 alias gcc-strict='gcc -std=c99 -pedantic -Wall'
 alias grep='grep --color=auto -n'
+alias djangogrep='grep --color=always -r -n --include \*.py --include \*.html'
 alias killbg='kill %{1..1000} 2>/dev/null'
 alias doc='cd ~/Documents'
 alias down='cd ~/Downloads'
