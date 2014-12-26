@@ -158,6 +158,8 @@ alias doc='cd ~/Documents'
 alias down='cd ~/Downloads'
 alias jj='. jjbin'
 alias mm='. mmbin'
+alias jmeter='wmname LG3D; jmeter'
+alias yaourt='yaourt --noconfirm'  # Ow! This is really bad! Oh well... :p
 # wr is in my scripts directory
 alias fren='wr fren' # Search WordReference (fr/en)
 alias enfr='wr enfr' # Search WordReference (en/fr)
