@@ -114,10 +114,10 @@ PS1=" $check $time $user @ $host in $dir$branch $root "
 #############
 
 eval `ssh-agent -s` > /dev/null 2>&1
-ssh-add ~/.ssh/aether33 > /dev/null 2>&1
+# ssh-add ~/.ssh/aether33 > /dev/null 2>&1
 ssh-add ~/.ssh/afnarel > /dev/null 2>&1
-ssh-add ~/.ssh/ignilife > /dev/null 2>&1
-ssh-add ~/.ssh/aws_afnarel_com.pem > /dev/null 2>&1
+# ssh-add ~/.ssh/ignilife > /dev/null 2>&1
+# ssh-add ~/.ssh/aws_afnarel_com.pem > /dev/null 2>&1
 
 ################
 # Mac specific #
