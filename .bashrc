@@ -44,7 +44,9 @@ export HISTSIZE=10000
 export PATH=".:/usr/local/bin:~/bin:~/Documents/scripts:$PATH"
 export PYTHONSTARTUP=~/.pythonrc.py
 export WORKON_HOME=~/.virtualenvs
+export ANDROID_HOME=~/android-sdk/
 export VIRTUALENVWRAPPER_HOOK_DIR=~/.virtualenvs_hooks
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk/
 
 # bash-completion
 # Already sourced in /etc/bash.bashrc
