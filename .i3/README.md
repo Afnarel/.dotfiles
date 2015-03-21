@@ -1,4 +1,11 @@
-# Available shortcuts
+# i3
+
+## Installation
+
+1. Clone this repository in your home folder (or symlink it)
+2. Run the provided setup.sh file as root (supported package managers: apt-get, pacman)
+
+## Available shortcuts
 
 ~~~
 All shortcuts must be prefixed with the Mod ("Windows") key
