@@ -17,8 +17,9 @@ e = display tree (tiling)
 p/n = previous/next workspace
 a/z = select parent/child node
 t = create (or/and goto) named workspace
-g = searched launched window by name
+g = searched launched app/window by name
 d = launch new app by name (dmenu)
+q = quit focused window
 v = next window created will be under the focused window
 b = next window created will be on the right of the focused window
 
@@ -29,4 +30,5 @@ h,j,k,l = Go to left/down/up/right window
 Shift + h,j,k,l = Move selected node left/down/up/right
 
 # TODO create pin/unpin tag shortcut
+# TODO make 'q' quit all windows in a focused group
 ~~~
